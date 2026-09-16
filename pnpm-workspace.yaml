@@ -2,5 +2,5 @@ packages:
   - 'packages/*'
   - 'apps/*'
 allowBuilds:
-  esbuild: set this to true or false
-  serverless: set this to true or false
+  esbuild: false
+  serverless: false
