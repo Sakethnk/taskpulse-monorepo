@@ -1,23 +1,21 @@
-import { Button } from "@/components/ui/button"
+import { CourseList } from "./features/courses/CourseList";
 
 function App() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold">
-          Welcome to TaskPulse Monorepo.
+    <main className="container mx-auto space-y-6 p-6">
+      <div>
+        <h1 className="text-3xl font-bold">
+          TaskPulse LMS
         </h1>
 
-        <p className="mt-4 text-muted-foreground">
-          Your frontend is running successfully.
+        <p className="mt-2 text-muted-foreground">
+          Explore our micro-learning courses.
         </p>
-
-        <Button className="mt-6">
-          TaskPulse Button
-        </Button>
       </div>
-    </div>
-  )
+
+      <CourseList />
+    </main>
+  );
 }
 
-export default App
+export default App;
