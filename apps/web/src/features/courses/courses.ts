@@ -81,3 +81,48 @@ export const courses: Course[] = [
     instructor: "TaskPulse Academy",
   },
 ];
+export type MicroLesson = {
+  id: number;
+  courseId: number;
+  title: string;
+  type: "Video" | "Tutorial";
+  duration: string;
+};
+
+export const microLessons: MicroLesson[] = [
+  {
+    id: 1,
+    courseId: 3,
+    title: "What is React?",
+    type: "Video",
+    duration: "5 min",
+  },
+  {
+    id: 2,
+    courseId: 3,
+    title: "Understanding Components",
+    type: "Video",
+    duration: "8 min",
+  },
+  {
+    id: 3,
+    courseId: 3,
+    title: "Understanding Props",
+    type: "Tutorial",
+    duration: "6 min",
+  },
+  {
+    id: 4,
+    courseId: 3,
+    title: "Introduction to State",
+    type: "Video",
+    duration: "10 min",
+  },
+  {
+    id: 5,
+    courseId: 3,
+    title: "Using useState",
+    type: "Tutorial",
+    duration: "7 min",
+  },
+];
