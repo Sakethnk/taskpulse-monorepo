@@ -7,21 +7,18 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
+import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 import type { Course } from "./courses";
 
 type CourseCardProps = {
   course: Course;
-  onViewCourse: (course: Course) => void;
 };
 
-export function CourseCard({
-  course,
-  onViewCourse,
-}: CourseCardProps) {
+export function CourseCard({ course }: CourseCardProps) {
   return (
     <Card className="flex h-full flex-col">
       <CardHeader>
@@ -55,11 +52,10 @@ export function CourseCard({
       </CardContent>
 
       <CardFooter>
-        <Button
-          className="w-full"
-          onClick={() => onViewCourse(course)}
-        >
-          View Course
+        <Button asChild className="w-full">
+          <Link to={`/courses/${course.id}`}>
+            View Course
+          </Link>
         </Button>
       </CardFooter>
     </Card>
